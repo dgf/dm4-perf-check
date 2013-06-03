@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>DeepaMehta 4 :: Performance :: Check Runner</name>
+    <groupId>de.deepamehta.performance.test</groupId>
+    <artifactId>dm4-performance-check-runner</artifactId>
+    <version>4.1</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>de.deepamehta</groupId>
+        <artifactId>deepamehta-plugin-parent</artifactId>
+        <version>4.1</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>deepamehta-public-repository</id>
+            <url>http://deepamehta.newthinking.net/maven2</url>
+        </repository>
+    </repositories>
+</project>
