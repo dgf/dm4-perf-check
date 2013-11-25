@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -x
 # generate and install service artifacts
 for service in groovy java scala; do
   echo generate $service
@@ -10,12 +10,12 @@ for service in groovy java scala; do
       -DarchetypeCatalog=http://ci.deepamehta.de \
       -DarchetypeGroupId=de.deepamehta.archetypes \
       -DarchetypeArtifactId=dm4-rest-$service-archetype \
-      -DarchetypeVersion=4.1 \
+      -DarchetypeVersion=4.1.3-SNAPSHOT \
       -DinteractiveMode=false
   echo install $service
   cd simple-rest-$service-plugin
-  sed -ie 's/FINEST/DEBUG/' src/main/resources/logging.properties
+  sed -i -e 's/ALL/WARNING/' src/main/resources/logging.properties
   mvn install
   cd ..
 done
-
+#EOF
